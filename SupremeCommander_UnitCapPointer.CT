@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"[X] &lt;== Supreme Commander 2 v1.260 Steam Script v2.0 AOB"</Description>
+      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+      <Color>FF0000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{
+===========================================
+ Game Title    : Supreme Commander 2
+ Game Version  : 1.260 (steam)
+ Game Sponsor  : Myself
+ Process Name  : SupremeCommander2.exe
+ Relevant Info : 32bits/RTS
+ Script Version: 2.0
+ CE Version    : 6.7
+ Release date  : 23-Jan-2019
+ Author        : Recifense
+ History:
+ 02-Sep-2014: First Release (CE64)
+ 23-Jan-2019: Release for CE67 AOB (new template)
+ Features:
+ - Minimum Resources
+ - Minimum Research Points
+ - God Mode
+ - Instant Building/Production
+ - Some Pointers
+===========================================
+}
+
+//=========================================
+// Checking CE version
+{$lua}
+  if(getCEVersion() &lt; 6.7) then
+    ShowMessage('Warning. CE version should be 6.7 or above')
+  end
+{$asm}
+
+//=========================================
+// Checking Selected Process
+{$lua}
+  if(process == nil) then
+    ShowMessage('No process was selected')
+  elseif (process ~= "SupremeCommander2.exe") then
+    ShowMessage('Warning. Expected Process = SupremeCommander2.exe')
+  end
+{$asm}
+
+//=========================================
+// Definitions
+define(LUDO,"SupremeCommander2.exe")
+{
+define(MOHP,SupremeCommander2.exe+0040ebe3)
+define(GDMD,SupremeCommander2.exe+0035fedc)
+}
+//=========================================
+// Constants used in the script (that can be changed)
+define(ctCE67,(float)6.7)
+define(ctMMRS,(float)67000.0)  // Minimum Res
+define(ctMRPT,(float)20.0)     // Minimum RP
+
+//=========================================
+[ENABLE]
+//=========================================
+// Check if script is compatible to this game version
+
+AOBScanModule(MOHP,$process,8b 90 74 02 00 00 56 57 8d 98 88 00 00 00 8d 72 20 b9 15 00 00 00)
+AOBScanModule(GDMD,$process,f3 0f 11 96 8c 00 00 00 e8 ?? ?? ?? ?? f3 0f 10 44 24 4c 83 c4 14)
+
+//=========================================
+alloc(MyCode,4096,$process)
+//=========================================
+// Declaration section
+label(_MonHumanPlayer)
+label(_BackMHP)
+label(_GodMode)
+label(_BackGMD)
+
+label(iEnableMMR)
+label(iEnableMRP)
+label(iEnableGMD)
+label(iEnableMBP)
+
+label(iPlayerID)
+
+label(fMinRes)
+
+label(pPlayer)
+
+//=========================================
+// Registering Symbols
+registersymbol(MyCode)
+registersymbol(iEnableMMR)
+registersymbol(iEnableMRP)
+registersymbol(iEnableGMD)
+registersymbol(iEnableMBP)
+registersymbol(fMinRes)
+
+registersymbol(MOHP)
+registersymbol(GDMD)
+
+//=========================================
+MyCode:
+//=========================================
+// Main game screen
+_MonHumanPlayer:
+ push ebx
+
+ mov edx,[eax+00000274]            // Original code
+
+ cmp dword ptr [eax+00000178],'Huma'
+ jne _ExitMHP
+
+ mov [pPlayer],eax
+
+ mov ebx,[eax+08]
+ mov [iPlayerID],ebx
+
+ cmp dword ptr [iEnableMMR],0
+ je _MonHP01                       // Jump if feature is disabled
+
+ mov ebx,[fMinRes]
+ cmp ebx,[edx+38]                  // Energy
+ js _MonHP00
+
+ mov [edx+38],ebx
+
+_MonHP00:
+ cmp ebx,[edx+3C]                  // Mass
+ js _MonHP01
+
+ mov [edx+3C],ebx
+
+_MonHP01:
+ cmp dword ptr [iEnableMRP],0
+ je _ExitMHP                      // Jump if feature is disabled
+
+ mov ebx,ctMRPT
+ cmp ebx,[edx+40]                 // Research Points
+ js _ExitMHP
+
+ mov [edx+40],ebx
+
+_ExitMHP:
+ pop ebx
+ jmp _BackMHP                     // Back to main code
+
+//=========================================
+// During Combat/Construction/Production
+_GodMode:
+ push eax
+ push ebx
+
+ cmp dword ptr [iEnableGMD],0
+ je _ExitGMD                       // Jump if feature is disabled
+
+ mov eax,[esi+000001a8]
+ cmp eax,[pPlayer]
+ jne _ExitGMD
+
+ cvtss2si eax,xmm2
+ cvtss2si ebx,[esi+0000008c]
+ cmp eax,ebx
+ jns _GodMD00
+
+ movss xmm2,[esi+0000008c]
+
+_GodMD00:
+ cmp dword ptr [iEnableMBP],0
+ je _ExitGMD                       // Jump if feature is disabled
+
+ movss xmm2,[esi+00000090]
+
+_ExitGMD:
+ pop ebx
+ pop eax
+
+ movss [esi+0000008C],xmm2         // Original code (upd HP)
+ jmp _BackGMD                      // Back to main code
+
+//=========================================
+align 10,'='
+//=========================================
+ db '===============================&gt;'
+ db 'CE6.7 Script by Recifense 190123'
+//=========================================
+// Variables
+iEnableMMR:
+ dd 0
+iEnableMRP:
+ dd 0
+iEnableGMD:
+ dd 0
+iEnableMBP:
+ dd 0
+fMinRes:
+ dd ctMMRS
+iPlayerID:
+ dd 0
+pPlayer:
+ dd 0
+
+//=========================================
+// Hacking Points
+MOHP:
+ jmp _MonHumanPlayer
+ nop
+_BackMHP:
+
+GDMD:
+ jmp _GodMode
+ nop
+ nop
+ nop
+_BackGMD:
+
+//=========================================
+// Script for Restoring Original Codes
+[DISABLE]
+MOHP:
+// mov edx,[eax+00000274]
+ db 8b 90 74 02 00 00
+
+GDMD:
+// movss [esi+0000008C],xmm2
+ db f3 0f 11 96 8c 00 00 00
+
+//=========================================
+// Unregistering Symbols
+unregistersymbol(MyCode)
+unregistersymbol(iEnableMMR)
+unregistersymbol(iEnableMRP)
+unregistersymbol(iEnableGMD)
+unregistersymbol(iEnableMBP)
+unregistersymbol(fMinRes)
+
+unregistersymbol(MOHP)
+unregistersymbol(GDMD)
+
+//=========================================
+dealloc(MyCode)
+//============= Scripts End ===============
+
+// ****************************************
+// NOTES
+// ****************************************
+{
+}
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>231</ID>
+          <Description>"[X] &lt;== Minimum Research Points"</Description>
+          <Color>004000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableMRP",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableMRP",0)
+memrec.Color=0x0c08000
+{$ASM}
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>66</ID>
+          <Description>"[X] &lt;== God Mode"</Description>
+          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <Color>004000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableGMD",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableGMD",0)
+memrec.Color=0x0c08000
+{$ASM}
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>229</ID>
+              <Description>"[X] &lt;== Instant Building Production"</Description>
+              <Color>004000</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableMBP",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableMBP",0)
+memrec.Color=0x0c08000
+{$ASM}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>230</ID>
+          <Description>"[X] &lt;== Minimum Resources "</Description>
+          <Options moHideChildren="1"/>
+          <Color>004000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableMMR",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableMMR",0)
+memrec.Color=0x0c08000
+{$ASM}
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>31</ID>
+              <Description>"Minimum Resource Value  =================&gt;"</Description>
+              <Color>0080FF</Color>
+              <VariableType>Float</VariableType>
+              <Address>fMinRes</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>228</ID>
+      <Description>"[X] &lt;== Table/Script Information"</Description>
+      <Options moHideChildren="1"/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[enable]
+define(test,LUDO)
+
+{$LUA}
+getMainForm().CommentButton.doClick()
+{$ASM}
+
+[disable]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>241</ID>
+      <Description>"Change Unit Cap"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+014CA52C</Address>
+      <Offsets>
+        <Offset>308</Offset>
+        <Offset>0</Offset>
+        <Offset>938</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>===========================================
+ Game Title    : Supreme Commander 2
+ Game Version  : 1.260 (steam)
+ Game Sponsor  : Myself
+ Process Name  : SupremeCommander2.exe
+ Relevant Info : 32bits/RTS
+ Script Version: 2.0
+ CE Version    : 6.7
+ Release date  : 23-Jan-2019
+ Author        : Recifense
+ History:
+ 02-Sep-2014: First Release (CE64)
+ 23-Jan-2019: Release for CE67 AOB (new template)
+ Features:
+ - Minimum Resources           [1]
+ - Minimum Research Points     [2]
+ - God Mode                    [3]
+ - Instant Building/Production [4]
+===========================================
+[1] For Human player only; (default = 67000)
+[2] For Human player only; (default = 20)
+[3] For Human player's Units/Buildings;
+[4] For Human player only; (it depends on GM enabled)
+===========================================
+[USAGE]
+1) Run CE67 or greater;
+2) Run Game;
+3) Load the game process "SupremeCommander2.exe" in CE;
+4) Load this table and activate the main script;
+5) Now Activate the script of each cheat you want to use;
+6) Game On;
+-------------------------------------------
+[MINIMUM RESOURCE VALUE]
+- You can change it.
+===========================================
+[HOTKEYS]
+- None defined
+===========================================
+[ADVICE]
+When you can,save the game before starting using table/cheat. So you can always come back in case you don't like the result.
+===========================================
+[INFO]
+Tested on Win 10 64bits
+===========================================
+Cheers!
+</Comments>
+</CheatTable>
