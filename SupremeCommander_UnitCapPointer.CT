@@ -59,7 +59,7 @@ define(GDMD,SupremeCommander2.exe+0035fedc)
 // Constants used in the script (that can be changed)
 define(ctCE67,(float)6.7)
 define(ctMMRS,(float)67000.0)  // Minimum Res
-define(ctMRPT,(float)20.0)     // Minimum RP
+define(ctMRPT,(float)50.0)     // Minimum RP
 
 //=========================================
 [ENABLE]

@@ -1,0 +1,1631 @@
+version = {
+    major = 1
+}
+options_overrides = {
+    anisotropic_filtering = {
+        default = 1,
+        custom = {
+            states = {
+                {
+                    key = 1,
+                    text = '<LOC _Off>Off'
+                },
+                {
+                    key = 2,
+                    text = '2'
+                },
+                {
+                    key = 4,
+                    text = '4'
+                },
+                {
+                    key = 8,
+                    text = '8'
+                },
+                {
+                    key = 16,
+                    text = '16'
+                }
+            }
+        }
+    },
+    fidelity = {
+        default = 1,
+        custom = {
+            states = {
+                {
+                    key = 0,
+                    text = '<LOC _Low>Low'
+                },
+                {
+                    key = 1,
+                    text = '<LOC _Medium>Medium'
+                },
+                {
+                    key = 2,
+                    text = '<LOC _High>High'
+                }
+            }
+        }
+    },
+    antialiasing = {
+        default = 0,
+        custom = {
+            states = {
+                {
+                    key = 0,
+                    text = '<LOC OPTIONS_0029>Off'
+                },
+                {
+                    key = 64,
+                    text = '2'
+                },
+                {
+                    key = 128,
+                    text = '4'
+                },
+                {
+                    key = 256,
+                    text = '8Q'
+                }
+            }
+        }
+    },
+    fidelity_presets = {
+        default = 2,
+        custom = {
+            states = {
+                {
+                    key = 0,
+                    text = '<LOC _Low>Low'
+                },
+                {
+                    key = 1,
+                    text = '<LOC _Medium>Medium'
+                },
+                {
+                    key = 2,
+                    text = '<LOC _High>High'
+                },
+                {
+                    key = 4,
+                    text = '<LOC _Custom>Custom'
+                }
+            }
+        }
+    },
+    shadow_quality = {
+        default = 1,
+        custom = {
+            states = {
+                {
+                    key = 0,
+                    text = '<LOC _Off>Off'
+                },
+                {
+                    key = 1,
+                    text = '<LOC _Low>Low'
+                },
+                {
+                    key = 2,
+                    text = '<LOC _Medium>Medium'
+                },
+                {
+                    key = 3,
+                    text = '<LOC _High>High'
+                }
+            }
+        }
+    },
+    secondary_adapter = {
+        default = 'disabled',
+        custom = {
+            states = {
+                {
+                    key = 'disabled',
+                    text = '<LOC _Disabled>Disabled'
+                }
+            }
+        }
+    },
+    water_fidelity = {
+        default = 2,
+        custom = {
+            states = {
+                {
+                    key = 1,
+                    text = '<LOC _Low>Low'
+                },
+                {
+                    key = 2,
+                    text = '<LOC _Medium>Medium'
+                },
+                {
+                    key = 3,
+                    text = '<LOC _High>High'
+                }
+            }
+        }
+    },
+    primary_adapter = {
+        default = '1024,768,60',
+        custom = {
+            states = {
+                {
+                    key = 'windowed',
+                    text = '<LOC _Windowed>Windowed'
+                },
+                {
+                    key = '3840,2160,60',
+                    text = '3840x2160(60)'
+                },
+                {
+                    key = '3840,2160,30',
+                    text = '3840x2160(30)'
+                },
+                {
+                    key = '1024,768,60',
+                    text = '1024x768(60)'
+                },
+                {
+                    key = '1152,864,59',
+                    text = '1152x864(59)'
+                },
+                {
+                    key = '1152,864,60',
+                    text = '1152x864(60)'
+                },
+                {
+                    key = '1280,768,60',
+                    text = '1280x768(60)'
+                },
+                {
+                    key = '1280,800,60',
+                    text = '1280x800(60)'
+                },
+                {
+                    key = '1280,960,60',
+                    text = '1280x960(60)'
+                },
+                {
+                    key = '1280,1024,60',
+                    text = '1280x1024(60)'
+                },
+                {
+                    key = '1360,768,60',
+                    text = '1360x768(60)'
+                },
+                {
+                    key = '1366,768,60',
+                    text = '1366x768(60)'
+                },
+                {
+                    key = '1440,1080,60',
+                    text = '1440x1080(60)'
+                },
+                {
+                    key = '1440,1080,59',
+                    text = '1440x1080(59)'
+                },
+                {
+                    key = '1600,900,60',
+                    text = '1600x900(60)'
+                },
+                {
+                    key = '1600,1024,60',
+                    text = '1600x1024(60)'
+                },
+                {
+                    key = '1600,1024,59',
+                    text = '1600x1024(59)'
+                },
+                {
+                    key = '1600,1200,59',
+                    text = '1600x1200(59)'
+                },
+                {
+                    key = '1600,1200,60',
+                    text = '1600x1200(60)'
+                },
+                {
+                    key = '1680,1050,60',
+                    text = '1680x1050(60)'
+                },
+                {
+                    key = '1680,1050,59',
+                    text = '1680x1050(59)'
+                },
+                {
+                    key = '1920,1080,60',
+                    text = '1920x1080(60)'
+                },
+                {
+                    key = '1920,1080,59',
+                    text = '1920x1080(59)'
+                },
+                {
+                    key = '1920,1200,59',
+                    text = '1920x1200(59)'
+                },
+                {
+                    key = '1920,1200,60',
+                    text = '1920x1200(60)'
+                },
+                {
+                    key = '1920,1440,59',
+                    text = '1920x1440(59)'
+                },
+                {
+                    key = '1920,1440,60',
+                    text = '1920x1440(60)'
+                },
+                {
+                    key = '2048,1536,60',
+                    text = '2048x1536(60)'
+                },
+                {
+                    key = '2048,1536,30',
+                    text = '2048x1536(30)'
+                },
+                {
+                    key = '2560,1440,59',
+                    text = '2560x1440(59)'
+                },
+                {
+                    key = '2560,1440,60',
+                    text = '2560x1440(60)'
+                },
+                {
+                    key = '2560,1600,60',
+                    text = '2560x1600(60)'
+                },
+                {
+                    key = '2560,1600,30',
+                    text = '2560x1600(30)'
+                },
+                {
+                    key = '1440,900,60',
+                    text = '1440x900(60)'
+                }
+            }
+        }
+    }
+}
+profile = {
+    LoadingFaction = 2,
+    current = 1,
+    profiles = {
+        {
+            Name = 'worker.unread-8o',
+            SteamId = '1891849827',
+            console_font_color = 'FFbadbdb',
+            LastCampaign = 'Cybran',
+            LastDifficulty = 2,
+            NoNis = true,
+            options = {
+                mainmenu_bgmovie = true,
+                tooltips = true,
+                vsync = 1,
+                joystick_vibration = true,
+                keyboard_rotate_accelerate_multiplier = 2,
+                FogOfWar = 'none',
+                NoRushOption = 'Off',
+                texture_level = 0,
+                joystick_rotate_speed = 15,
+                wheel_sensitivity = 40,
+                DLCEnabled = false,
+                GameSpeed = 'fast',
+                PrebuiltUnits = 'Off',
+                subtitles = true,
+                strategic_overlay = true,
+                lightfx = 0,
+                lock_fullscreen_cursor_to_window = 0,
+                antialiasing = 0,
+                LastScenario = 'sc2_mp_304',
+                render_skydome = 1,
+                joystick_zoom_speed = 16,
+                keyboard_pan_accelerate_multiplier = 4,
+                allmilitary = true,
+                cinematic_subtitles = false,
+                display_eta = false,
+                joystick_invert_rotation = false,
+                fidelity = 1,
+                screen_edge_pans_main_view = 0,
+                Victory = 'demoralization',
+                vo_volume = 100,
+                allintel = true,
+                keyboard_pan_speed = 5400,
+                strat_icons_always_on = 1,
+                joystick_camera_rotation = true,
+                secondary_adapter = 'disabled',
+                CheatsEnabled = 'false',
+                primary_adapter = 'windowed',
+                model_detail = 0,
+                Observers = 'Allowed',
+                mp_taunt_head_enabled = 'true',
+                water_fidelity = 3,
+                shadow_quality = 3,
+                skin_change_on_start = 'yes',
+                econ_warnings = true,
+                arrow_keys_pan_main_view = 1,
+                uvd_format = 'full',
+                master_volume = 100,
+                depth_of_field = 1,
+                fidelity_presets = 2,
+                tooltip_delay = 0,
+                joystick_pan_speed = 215,
+                fx_volume = 100,
+                quick_exit = 'false',
+                TeamSpawn = 'fixed',
+                UnitCap = '500',
+                music_volume = 100,
+                keyboard_rotate_speed = 10,
+                joystick_invert_zoom = true,
+                anisotropic_filtering = 8,
+                unit_health_bars = true,
+                show_attached_unit_lifebars = true
+            },
+            console_font_size = 12,
+            stats = {
+                {
+                    key = 'units_ground_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'units_ground_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_air_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'units_air_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_naval_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'units_naval_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_general_captured',
+                    value = 0,
+                    type = 'captured'
+                },
+                {
+                    key = 'units_cdr_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_nukes_fired',
+                    value = 0,
+                    type = 'used'
+                },
+                {
+                    key = 'units_pointdef_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_antiair_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_structure_kills',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_structure_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'units_engineer_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'resources_mass_built',
+                    value = 4121165.5,
+                    type = 'build'
+                },
+                {
+                    key = 'resources_energy_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'units_experimental_built',
+                    value = 0,
+                    type = 'build'
+                },
+                {
+                    key = 'units_experimental_killed',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'units_built',
+                    value = 22908,
+                    type = 'build'
+                },
+                {
+                    key = 'units_killed',
+                    value = 0,
+                    type = 'kills'
+                },
+                {
+                    key = 'enemies_killed',
+                    value = 36338,
+                    type = 'kills'
+                },
+                {
+                    key = 'total_time_played',
+                    value = 149220,
+                    type = 'time'
+                },
+                {
+                    key = 'total_campaign_score',
+                    value = 66966.796875,
+                    type = 'campaign_score'
+                },
+                {
+                    key = 'won_skirmish_any_ai',
+                    value = 1,
+                    type = 'set_stat'
+                },
+                {
+                    key = 'won_skirmish_all_ai',
+                    value = 1,
+                    type = 'set_stat'
+                },
+                {
+                    key = 'min_skirmish_win_time',
+                    value = 432,
+                    type = 'min_stat'
+                },
+                {
+                    key = 'skirmish_win_count',
+                    value = 31,
+                    type = 'skirmish_wins'
+                },
+                {
+                    key = 'won_skirmish_no_experimentals',
+                    value = 2,
+                    type = 'skirmish_wins'
+                },
+                {
+                    key = 'improved_campaign_score',
+                    value = 1,
+                    type = 'set_stat'
+                },
+                {
+                    key = 'online_matches_won',
+                    value = 0,
+                    type = 'online_won'
+                },
+                {
+                    key = 'ranked_online_matches_won',
+                    value = 0,
+                    type = 'online_won'
+                },
+                {
+                    key = 'coop_matches_won_vs_ai',
+                    value = 0,
+                    type = 'online_won'
+                },
+                {
+                    key = 'f_units_built',
+                    type = 'faction_build',
+                    factions = {
+                        {
+                            fac = 'UEF',
+                            units = {
+                                {
+                                    key = 'experimental',
+                                    value = 0
+                                }
+                            }
+                        },
+                        {
+                            fac = 'CYBRAN',
+                            units = {
+                                {
+                                    key = 'experimental',
+                                    value = 0
+                                }
+                            }
+                        },
+                        {
+                            fac = 'ILLUMINATE',
+                            units = {
+                                {
+                                    key = 'experimental',
+                                    value = 0
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    key = 'f_wins',
+                    type = 'faction_win',
+                    factions = {
+                        {
+                            skirmish_played = 40,
+                            fac = 'UEF',
+                            skirmish_won = 28
+                        },
+                        {
+                            skirmish_played = 1,
+                            fac = 'CYBRAN',
+                            skirmish_won = 1
+                        },
+                        {
+                            skirmish_played = 2,
+                            fac = 'ILLUMINATE',
+                            skirmish_won = 2
+                        }
+                    }
+                },
+                {
+                    key = 'maps',
+                    type = 'map',
+                    maps = {
+                        {
+                            key = 'SC2_MP_001',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 24
+                        },
+                        {
+                            key = 'SC2_MP_002',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_003',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_004',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_005',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_006',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_007',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_101',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_102',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_103',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_104',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_105',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 24
+                        },
+                        {
+                            key = 'SC2_MP_106',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_201',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_202',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_203',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_204',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_205',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_206',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_206',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_301',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 16
+                        },
+                        {
+                            key = 'SC2_MP_302',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_303',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_304',
+                            skirmish = 1,
+                            multi = 0,
+                            lev = 4,
+                            winmode = 24
+                        },
+                        {
+                            key = 'SC2_MP_304_1K',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_305',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_MP_306',
+                            skirmish = 0,
+                            multi = 0,
+                            lev = 0,
+                            winmode = 0
+                        },
+                        {
+                            key = 'SC2_CA_U01',
+                            lev = 6,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_U02',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_U03',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_U04',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_U05',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_U06',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_I01',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_I02',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            multi = 0,
+                            winmode = 1,
+                            lev = 4,
+                            key = 'SC2_CA_I03'
+                        },
+                        {
+                            lev = 4,
+                            key = 'SC2_CA_I04',
+                            winmode = 1,
+                            multi = 0
+                        },
+                        {
+                            winmode = 1,
+                            multi = 0,
+                            key = 'SC2_CA_I05',
+                            lev = 4
+                        },
+                        {
+                            winmode = 1,
+                            multi = 0,
+                            key = 'SC2_CA_I06',
+                            lev = 5
+                        },
+                        {
+                            winmode = 1,
+                            multi = 0,
+                            key = 'SC2_CA_C01',
+                            lev = 6
+                        },
+                        {
+                            key = 'SC2_CA_C02',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_C03',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_C04',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            key = 'SC2_CA_C05',
+                            lev = 4,
+                            multi = 0,
+                            winmode = 1
+                        },
+                        {
+                            multi = 0,
+                            winmode = 1,
+                            lev = 2,
+                            key = 'SC2_CA_TUT_01'
+                        },
+                        {
+                            multi = 0,
+                            winmode = 1,
+                            lev = 2,
+                            key = 'SC2_CA_TUT_02'
+                        }
+                    }
+                }
+            },
+            LastScenario = 'SC2_CA_C01',
+            LoadingFaction = 1,
+            chat_window = {
+                bottom = 768,
+                right = 430,
+                left = 8,
+                top = 613
+            },
+            layout = 'bottom',
+            console_font = 'Zeroes Three',
+            mini_ui_minimap = {
+                bottom = 367,
+                right = 237,
+                left = 10,
+                top = 157
+            },
+            console_size = 5,
+            skin = 'uef',
+            NetName = 'worker.unread-8o',
+            console_fade_delay = 3,
+            campaign = {
+                Tutorial = {
+                    SC2_CA_TUT_01 = {
+                        { },
+                        {
+                            ScoreSummary = {
+                                ObjectivesPoints = 5000,
+                                HighMedals = 5,
+                                OverallPoints = 20000,
+                                TimePoints = 5000,
+                                OverallMedals = 5,
+                                ResearchPoints = 5000,
+                                IsTutorial = true,
+                                MedalType = 3,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                ResearchStars = 5,
+                                TimeStars = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        { },
+                        completedObjectives = {
+                            '<LOC SCENARIO_0499>Pan and Scan',
+                            '<LOC SCENARIO_0503>Spin Me Round',
+                            '<LOC SCENARIO_0507>A New Angle',
+                            '<LOC SCENARIO_0511>Zoom!',
+                            '<LOC SCENARIO_0515>Select Me',
+                            "<LOC SCENARIO_0519>Get Movin'",
+                            '<LOC SCENARIO_0523>Energy Assassin',
+                            '<LOC SCENARIO_0527>Capture Me',
+                            '<LOC SCENARIO_0531>Tank Attack',
+                            '<LOC SCENARIO_0533>Land Zone',
+                            '<LOC SCENARIO_0537>Amass Mass',
+                            '<LOC SCENARIO_0539>Energize',
+                            '<LOC SCENARIO_0541>Giving Tanks',
+                            '<LOC SCENARIO_0545>Add Add-Ons',
+                            '<LOC SCENARIO_0549>Base of Operations'
+                        },
+                        success = true,
+                        allSecondary = true,
+                        allPrimary = true
+                    },
+                    SC2_CA_TUT_02 = {
+                        { },
+                        {
+                            ScoreSummary = {
+                                ObjectivesPoints = 5000,
+                                HighMedals = 5,
+                                OverallPoints = 20000,
+                                TimePoints = 5000,
+                                OverallMedals = 5,
+                                ResearchPoints = 5000,
+                                IsTutorial = true,
+                                MedalType = 3,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                ResearchStars = 5,
+                                TimeStars = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        { },
+                        completedObjectives = {
+                            "<LOC SCENARIO_0571>Let's Do Science",
+                            '<LOC SCENARIO_0575>Face Off',
+                            '<LOC SCENARIO_0577>Station to Station',
+                            '<LOC SCENARIO_0579>The Big Picture',
+                            '<LOC SCENARIO_0583>The War on Science'
+                        },
+                        success = true,
+                        allSecondary = true,
+                        allPrimary = true
+                    }
+                },
+                Illuminate = {
+                    SC2_CA_I02 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 3,
+                                TimeStars = 5,
+                                OverallPoints = 24325,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 4000,
+                                ResearchPoints = 2500,
+                                ResearchStars = 2,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 662.5,
+                                IsTutorial = false,
+                                HighMedals = 3,
+                                ObjectivesStars = 4
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0238>Unsafe Landing',
+                            '<LOC SCENARIO_0240>Alarming Production',
+                            '<LOC SCENARIO_0242>Big Surprise'
+                        }
+                    },
+                    SC2_CA_I06 = {
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 3,
+                                TimeStars = 5,
+                                OverallPoints = 7726.25,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 1,
+                                CombatStars = 0,
+                                CombatPoints = 452.5,
+                                IsTutorial = false,
+                                HighMedals = 3,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        { },
+                        {
+                            ScoreSummary = {
+                                ObjectivesPoints = 5000,
+                                HighMedals = 3,
+                                OverallPoints = 28127.142578125,
+                                TimePoints = 5000,
+                                OverallMedals = 3,
+                                ResearchPoints = 3428.5715332031,
+                                IsTutorial = false,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 635,
+                                ResearchStars = 3,
+                                TimeStars = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        completedObjectives = {
+                            '<LOC SCENARIO_0290>Stand Off',
+                            '<LOC SCENARIO_0292>Classmates',
+                            '<LOC SCENARIO_0294>Research Technology',
+                            '<LOC SCENARIO_0298>A Czar is Born',
+                            '<LOC SCENARIO_0296>Bot Lord'
+                        },
+                        success = true,
+                        allSecondary = true,
+                        allPrimary = true
+                    },
+                    SC2_CA_I05 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                ObjectivesPoints = 4000,
+                                HighMedals = 3,
+                                OverallPoints = 27466.666015625,
+                                TimePoints = 5000,
+                                OverallMedals = 3,
+                                ResearchPoints = 2700,
+                                IsTutorial = false,
+                                MedalType = 3,
+                                CombatStars = 2,
+                                CombatPoints = 2033.3333740234,
+                                ResearchStars = 2,
+                                TimeStars = 5,
+                                ObjectivesStars = 4
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        completedObjectives = {
+                            '<LOC SCENARIO_0277>Center of Attention',
+                            '<LOC SCENARIO_0281>Space Temple Pilots'
+                        },
+                        success = true,
+                        allSecondary = true,
+                        allPrimary = true
+                    },
+                    SC2_CA_I04 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 3,
+                                TimeStars = 5,
+                                OverallPoints = 27885.71484375,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 4000,
+                                ResearchPoints = 4500,
+                                ResearchStars = 4,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 442.8571472168,
+                                IsTutorial = false,
+                                HighMedals = 3,
+                                ObjectivesStars = 4
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0268>UEF No More'
+                        }
+                    },
+                    SC2_CA_I01 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 5,
+                                TimeStars = 5,
+                                OverallPoints = 52979.19921875,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 3,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                IsTutorial = false,
+                                HighMedals = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0227>Sink or Swim',
+                            '<LOC SCENARIO_0231>Research Technology',
+                            '<LOC SCENARIO_0229>Ripped to Shreds',
+                            '<LOC SCENARIO_0233>Blockhead'
+                        }
+                    },
+                    SC2_CA_I03 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                ObjectivesPoints = 4000,
+                                HighMedals = 4,
+                                OverallPoints = 38000,
+                                TimePoints = 5000,
+                                OverallMedals = 4,
+                                ResearchPoints = 5000,
+                                IsTutorial = false,
+                                MedalType = 3,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                ResearchStars = 5,
+                                TimeStars = 5,
+                                ObjectivesStars = 4
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        completedObjectives = {
+                            '<LOC SCENARIO_0251>The Big House',
+                            '<LOC SCENARIO_0255>Research Technology',
+                            '<LOC SCENARIO_0253>Out of Control'
+                        },
+                        success = true,
+                        allSecondary = true,
+                        allPrimary = true
+                    }
+                },
+                UEF = {
+                    SC2_CA_U03 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 4,
+                                TimeStars = 5,
+                                OverallPoints = 32933.3359375,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 3,
+                                CombatStars = 1,
+                                CombatPoints = 1466.6666259766,
+                                IsTutorial = false,
+                                HighMedals = 4,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0441>Mass Attack',
+                            '<LOC SCENARIO_0449>Research Technology',
+                            '<LOC SCENARIO_0443>End Gauge',
+                            '<LOC SCENARIO_0447>Get Kraken',
+                            '<LOC SCENARIO_0445>Left Behind'
+                        }
+                    },
+                    SC2_CA_U06 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 3,
+                                TimeStars = 5,
+                                OverallPoints = 28249.56640625,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 3434.7827148438,
+                                ResearchStars = 3,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 690,
+                                IsTutorial = false,
+                                HighMedals = 3,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0484>Panic Attack',
+                            '<LOC SCENARIO_0486>Chain Reaction',
+                            '<LOC SCENARIO_0494>None Shall Pass!',
+                            '<LOC SCENARIO_0488>Core Damage'
+                        }
+                    },
+                    SC2_CA_U05 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 4,
+                                TimeStars = 5,
+                                OverallPoints = 33033.33203125,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 3066.6667480469,
+                                ResearchStars = 3,
+                                MedalType = 3,
+                                CombatStars = 3,
+                                CombatPoints = 3450,
+                                IsTutorial = false,
+                                HighMedals = 4,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0471>Evacuation',
+                            '<LOC SCENARIO_0479>Experimenter',
+                            '<LOC SCENARIO_0473>Following Orders',
+                            '<LOC SCENARIO_0477>Nuke Nuker'
+                        }
+                    },
+                    SC2_CA_U02 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 4,
+                                TimeStars = 5,
+                                OverallPoints = 38320,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 4600,
+                                ResearchStars = 4,
+                                MedalType = 3,
+                                CombatStars = 4,
+                                CombatPoints = 4560,
+                                IsTutorial = false,
+                                HighMedals = 4,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0426>On the Defensive',
+                            '<LOC SCENARIO_0428>Look to the Skies',
+                            '<LOC SCENARIO_0430>Research Technology',
+                            '<LOC SCENARIO_0432>Base of Operations',
+                            '<LOC SCENARIO_0434>Economic Meltdown'
+                        }
+                    },
+                    SC2_CA_U04 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 2,
+                                TimeStars = 5,
+                                OverallPoints = 20153.333984375,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 3000,
+                                ResearchPoints = 1666.6667480469,
+                                ResearchStars = 1,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 410,
+                                IsTutorial = false,
+                                HighMedals = 2,
+                                ObjectivesStars = 3
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0456>Cool Off Coleman',
+                            '<LOC SCENARIO_0458>Big and Deadly',
+                            '<LOC SCENARIO_0466>Brutal Conqueror'
+                        }
+                    },
+                    SC2_CA_U01 = {
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 5,
+                                TimeStars = 5,
+                                OverallPoints = 25494.400390625,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 2,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                IsTutorial = false,
+                                HighMedals = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 5,
+                                TimeStars = 5,
+                                OverallPoints = 53397.6015625,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 3,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                IsTutorial = false,
+                                HighMedals = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = true,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0413>Sneak Attack',
+                            '<LOC SCENARIO_0421>Survivor',
+                            '<LOC SCENARIO_0415>Defensive Position',
+                            '<LOC SCENARIO_0419>Research Technology',
+                            '<LOC SCENARIO_0417>Experimental Invasion'
+                        }
+                    }
+                },
+                Cybran = {
+                    SC2_CA_C04 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 3,
+                                TimeStars = 5,
+                                OverallPoints = 31318.181640625,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 659.09094238281,
+                                IsTutorial = false,
+                                HighMedals = 3,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0192>Band of Commanders',
+                            '<LOC SCENARIO_0194>Brothers and Sisters in Arms',
+                            '<LOC SCENARIO_0196>Research Technology'
+                        }
+                    },
+                    SC2_CA_C05 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 2,
+                                TimeStars = 5,
+                                OverallPoints = 19857.142578125,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 1000,
+                                ResearchPoints = 2700,
+                                ResearchStars = 2,
+                                MedalType = 3,
+                                CombatStars = 1,
+                                CombatPoints = 1228.5714111328,
+                                IsTutorial = false,
+                                HighMedals = 2,
+                                ObjectivesStars = 1
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0203>Well Stocked'
+                        }
+                    },
+                    SC2_CA_C02 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 3,
+                                TimeStars = 5,
+                                OverallPoints = 28350,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 4000,
+                                ResearchPoints = 4400,
+                                ResearchStars = 4,
+                                MedalType = 3,
+                                CombatStars = 0,
+                                CombatPoints = 775,
+                                IsTutorial = false,
+                                HighMedals = 3,
+                                ObjectivesStars = 4
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0168>Serve the Server',
+                            '<LOC SCENARIO_0174>Great Escapist'
+                        }
+                    },
+                    SC2_CA_C03 = {
+                        { },
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 4,
+                                TimeStars = 5,
+                                OverallPoints = 38320,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 3,
+                                CombatStars = 4,
+                                CombatPoints = 4160,
+                                IsTutorial = false,
+                                HighMedals = 4,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = true,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        allPrimary = true,
+                        success = true,
+                        allSecondary = true,
+                        completedObjectives = {
+                            '<LOC SCENARIO_0185>Research Technology',
+                            '<LOC SCENARIO_0179>Station Agent',
+                            '<LOC SCENARIO_0181>Ex-Files',
+                            '<LOC SCENARIO_0608>Station Defender',
+                            '<LOC SCENARIO_0183>Lizard King'
+                        }
+                    },
+                    SC2_CA_C01 = {
+                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 5,
+                                TimeStars = 5,
+                                OverallPoints = 41472.3984375,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 2,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                IsTutorial = false,
+                                HighMedals = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
+                        {
+                            ScoreSummary = {
+                                ObjectivesPoints = 5000,
+                                HighMedals = 4,
+                                OverallPoints = 32588.888671875,
+                                TimePoints = 1544.4444580078,
+                                OverallMedals = 4,
+                                ResearchPoints = 4750,
+                                IsTutorial = false,
+                                MedalType = 3,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                ResearchStars = 4,
+                                TimeStars = 0,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allSecondary = true,
+                            allPrimary = true
+                        },
+                        completedObjectives = {
+                            '<LOC SCENARIO_0155>Brain Drain',
+                            '<LOC SCENARIO_0161>The Shield',
+                            '<LOC SCENARIO_0157>The Gate Escape',
+                            '<LOC SCENARIO_0163>Survival Expert',
+                            '<LOC SCENARIO_0159>Research Technology'
+                        },
+                        success = true,
+                        allSecondary = true,
+                        allPrimary = true
+                    }
+                }
+            }
+        },
+        ['1'] = {
+            options = {
+                reticle_drift_enable = false
+            }
+        }
+    },
+    ['profiles[1]'] = {
+        EnableChallenge = 1
+    }
+}
+Windows = {
+    Main = {
+        maximized = true,
+        y = 708,
+        height = 768,
+        width = 1024,
+        x = -2571
+    }
+}
