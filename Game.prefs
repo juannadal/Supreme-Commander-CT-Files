@@ -292,15 +292,15 @@ options_overrides = {
     }
 }
 profile = {
-    LoadingFaction = 2,
+    LoadingFaction = 1,
     current = 1,
     profiles = {
         {
             Name = 'worker.unread-8o',
             SteamId = '1891849827',
             console_font_color = 'FFbadbdb',
-            LastCampaign = 'Cybran',
-            LastDifficulty = 2,
+            LastCampaign = 'UEF',
+            LoadingFaction = 1,
             NoNis = true,
             options = {
                 mainmenu_bgmovie = true,
@@ -329,21 +329,21 @@ profile = {
                 cinematic_subtitles = false,
                 display_eta = false,
                 joystick_invert_rotation = false,
-                fidelity = 1,
+                allintel = true,
                 screen_edge_pans_main_view = 0,
                 Victory = 'demoralization',
+                fidelity = 1,
                 vo_volume = 100,
-                allintel = true,
                 keyboard_pan_speed = 5400,
-                strat_icons_always_on = 1,
+                primary_adapter = 'windowed',
                 joystick_camera_rotation = true,
                 secondary_adapter = 'disabled',
+                strat_icons_always_on = 1,
                 CheatsEnabled = 'false',
-                primary_adapter = 'windowed',
-                model_detail = 0,
-                Observers = 'Allowed',
-                mp_taunt_head_enabled = 'true',
                 water_fidelity = 3,
+                model_detail = 0,
+                mp_taunt_head_enabled = 'true',
+                Observers = 'Allowed',
                 shadow_quality = 3,
                 skin_change_on_start = 'yes',
                 econ_warnings = true,
@@ -366,6 +366,8 @@ profile = {
                 show_attached_unit_lifebars = true
             },
             console_font_size = 12,
+            LastDifficulty = 2,
+            LastScenario = 'SC2_CA_U02',
             stats = {
                 {
                     key = 'units_ground_built',
@@ -479,7 +481,7 @@ profile = {
                 },
                 {
                     key = 'total_campaign_score',
-                    value = 66966.796875,
+                    value = 96445.6015625,
                     type = 'campaign_score'
                 },
                 {
@@ -586,193 +588,193 @@ profile = {
                     type = 'map',
                     maps = {
                         {
+                            winmode = 24,
+                            skirmish = 1,
                             key = 'SC2_MP_001',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 24
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_002',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_003',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_004',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_005',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_006',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_007',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_101',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_102',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_103',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_104',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 24,
+                            skirmish = 1,
                             key = 'SC2_MP_105',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 24
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_106',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_201',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_202',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_203',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_204',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_205',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
-                            key = 'SC2_MP_206',
+                            winmode = 16,
                             skirmish = 1,
-                            multi = 0,
+                            key = 'SC2_MP_206',
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
-                            key = 'SC2_MP_206',
+                            winmode = 0,
                             skirmish = 0,
-                            multi = 0,
+                            key = 'SC2_MP_206',
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 16,
+                            skirmish = 1,
                             key = 'SC2_MP_301',
-                            skirmish = 1,
-                            multi = 0,
                             lev = 4,
-                            winmode = 16
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_302',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_303',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
-                            key = 'SC2_MP_304',
+                            winmode = 24,
                             skirmish = 1,
-                            multi = 0,
+                            key = 'SC2_MP_304',
                             lev = 4,
-                            winmode = 24
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_304_1K',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
+                            winmode = 0,
+                            skirmish = 0,
                             key = 'SC2_MP_305',
-                            skirmish = 0,
-                            multi = 0,
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
-                            key = 'SC2_MP_306',
+                            winmode = 0,
                             skirmish = 0,
-                            multi = 0,
+                            key = 'SC2_MP_306',
                             lev = 0,
-                            winmode = 0
+                            multi = 0
                         },
                         {
                             key = 'SC2_CA_U01',
@@ -782,7 +784,7 @@ profile = {
                         },
                         {
                             key = 'SC2_CA_U02',
-                            lev = 4,
+                            lev = 6,
                             multi = 0,
                             winmode = 1
                         },
@@ -891,8 +893,6 @@ profile = {
                     }
                 }
             },
-            LastScenario = 'SC2_CA_C01',
-            LoadingFaction = 1,
             chat_window = {
                 bottom = 768,
                 right = 430,
@@ -1308,7 +1308,26 @@ profile = {
                     },
                     SC2_CA_U02 = {
                         { },
-                        { },
+                        {
+                            ScoreSummary = {
+                                OverallMedals = 5,
+                                TimeStars = 5,
+                                OverallPoints = 29478.80078125,
+                                TimePoints = 5000,
+                                ObjectivesPoints = 5000,
+                                ResearchPoints = 5000,
+                                ResearchStars = 5,
+                                MedalType = 2,
+                                CombatStars = 5,
+                                CombatPoints = 5000,
+                                IsTutorial = false,
+                                HighMedals = 5,
+                                ObjectivesStars = 5
+                            },
+                            ScoreImproved = false,
+                            allPrimary = true,
+                            allSecondary = true
+                        },
                         {
                             ScoreSummary = {
                                 OverallMedals = 4,
@@ -1337,7 +1356,8 @@ profile = {
                             '<LOC SCENARIO_0428>Look to the Skies',
                             '<LOC SCENARIO_0430>Research Technology',
                             '<LOC SCENARIO_0432>Base of Operations',
-                            '<LOC SCENARIO_0434>Economic Meltdown'
+                            '<LOC SCENARIO_0434>Economic Meltdown',
+                            '<LOC SCENARIO_0436>Economic Opportunist'
                         }
                     },
                     SC2_CA_U04 = {
