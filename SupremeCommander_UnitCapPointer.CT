@@ -365,6 +365,32 @@ getMainForm().CommentButton.doClick()
         <Offset>938</Offset>
       </Offsets>
     </CheatEntry>
+
+
+ <!-- Fast ACU Build pointer -->
+     <CheatEntry>
+      <ID>242</ID>
+      <Description>"Fast ACU Build"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
+      <Pointer>true</Pointer>
+      <Active>true</Active>
+      
+      <Offsets>
+        <Offset>0x6E0</Offset>
+        <Offset>0x10</Offset>
+        <Offset>0x4</Offset>
+        <Offset>0xC</Offset>
+        <Offset>0x20</Offset>
+        <Offset>0x40</Offset>
+        <Offset>0x8EC</Offset>
+      </Offsets>
+    </CheatEntry>
+
+
+
+
+
   </CheatEntries>
   <UserdefinedSymbols/>
   <Comments>===========================================
