@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"[X] &lt;== Supreme Commander 2 v1.260 Steam Script v2.0 AOB"</Description>
+      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+      <Color>FF0000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{===========================================
+ Game Title    : Supreme Commander 2
+ Game Version  : 1.260 (steam)
+ Game Sponsor  : Myself
+ Process Name  : SupremeCommander2.exe
+ Relevant Info : 32bits/RTS
+ Script Version: 2.0
+ CE Version    : 6.7
+ Release date  : 23-Jan-2019
+ Author        : Recifense
+ History:
+ 02-Sep-2014: First Release (CE64)
+ 23-Jan-2019: Release for CE67 AOB (new template)
+ Features:
+ - Minimum Resources
+ - Minimum Research Points
+ - God Mode
+ - Instant Building/Production
+ - Some Pointers
+===========================================
+}
+
+// ... [rest of your full AOB/Lua/ASM script here] ...
+      
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>231</ID>
+          <Description>"[X] &lt;== Minimum Research Points"</Description>
+          <Color>004000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableMRP",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableMRP",0)
+memrec.Color=0x0c08000
+{$ASM}
+          
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>66</ID>
+          <Description>"[X] &lt;== God Mode"</Description>
+          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <Color>004000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableGMD",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableGMD",0)
+memrec.Color=0x0c08000
+{$ASM}
+          
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>229</ID>
+              <Description>"[X] &lt;== Instant Building Production"</Description>
+              <Color>004000</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableMBP",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableMBP",0)
+memrec.Color=0x0c08000
+{$ASM}
+              
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>230</ID>
+          <Description>"[X] &lt;== Minimum Resources"</Description>
+          <Options moHideChildren="1"/>
+          <Color>004000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+{$LUA}
+writeInteger("iEnableMMR",1)
+memrec.Color=0x0004000
+{$ASM}
+
+[disable]
+{$LUA}
+writeInteger("iEnableMMR",0)
+memrec.Color=0x0c08000
+{$ASM}
+          
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>31</ID>
+              <Description>"Minimum Resource Value  =================&gt;"</Description>
+              <Color>0080FF</Color>
+              <VariableType>Float</VariableType>
+              <Address>fMinRes</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>228</ID>
+      <Description>"[X] &lt;== Table/Script Information"</Description>
+      <Options moHideChildren="1"/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[enable]
+define(test,LUDO)
+{$LUA}
+getMainForm().CommentButton.doClick()
+{$ASM}
+
+[disable]
+      
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>241</ID>
+      <Description>"Change Unit Cap"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
+      <Offsets>
+        <Offset>0x308</Offset>
+        <Offset>0x0</Offset>
+        <Offset>0x938</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>242</ID>
+      <Description>"Fast ACU Build"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
+      <Offsets>
+        <Offset>0x8E4</Offset>
+        <Offset>0x38</Offset>
+        <Offset>0x30</Offset>
+        <Offset>0x1E4</Offset>
+        <Offset>0x10</Offset>
+        <Offset>0x1F4</Offset>
+        <Offset>0x71C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>243</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+014CA52C</Address>
+      <Offsets>
+        <Offset>71C</Offset>
+        <Offset>1C</Offset>
+        <Offset>10</Offset>
+        <Offset>18</Offset>
+        <Offset>8</Offset>
+        <Offset>14</Offset>
+        <Offset>8DC</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>244</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+014CA52C</Address>
+      <Offsets>
+        <Offset>71C</Offset>
+        <Offset>1C</Offset>
+        <Offset>10</Offset>
+        <Offset>18</Offset>
+        <Offset>C</Offset>
+        <Offset>14</Offset>
+        <Offset>8DC</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>250</ID>
+      <Description>"pointerscan result"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+014CA52C</Address>
+      <Offsets>
+        <Offset>6E0</Offset>
+        <Offset>10</Offset>
+        <Offset>4</Offset>
+        <Offset>C</Offset>
+        <Offset>20</Offset>
+        <Offset>40</Offset>
+        <Offset>8EC</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>===========================================
+    Game Title    : Supreme Commander 2
+    Game Version  : 1.260 (steam)
+    Game Sponsor  : Myself
+    Process Name  : SupremeCommander2.exe
+    Relevant Info : 32bits/RTS
+    Script Version: 2.0
+    CE Version    : 6.7
+    Release date  : 23-Jan-2019
+    Author        : Recifense
+    History:
+    02-Sep-2014: First Release (CE64)
+    23-Jan-2019: Release for CE67 AOB (new template)
+    Features:
+    - Minimum Resources           [1]
+    - Minimum Research Points     [2]
+    - God Mode                    [3]
+    - Instant Building/Production [4]
+    ===========================================
+    [1] For Human player only; (default = 67000)
+    [2] For Human player only; (default = 20)
+    [3] For Human player's Units/Buildings;
+    [4] For Human player only; (it depends on GM enabled)
+    ===========================================
+    [USAGE]
+    1) Run CE67 or greater;
+    2) Run Game;
+    3) Load the game process "SupremeCommander2.exe" in CE;
+    4) Load this table and activate the main script;
+    5) Now Activate the script of each cheat you want to use;
+    6) Game On;
+    -------------------------------------------
+    [MINIMUM RESOURCE VALUE]
+    - You can change it.
+    ===========================================
+    [HOTKEYS]
+    - None defined
+    ===========================================
+    [ADVICE]
+    When you can, save the game before starting using table/cheat. So you can always come back in case you don't like the result.
+    ===========================================
+    [INFO]
+    Tested on Win 10 64bits
+    ===========================================
+    Cheers!
+  
+</Comments>
+</CheatTable>

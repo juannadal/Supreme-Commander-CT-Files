@@ -365,32 +365,108 @@ getMainForm().CommentButton.doClick()
         <Offset>938</Offset>
       </Offsets>
     </CheatEntry>
-
-
- <!-- Fast ACU Build pointer -->
-     <CheatEntry>
+    <CheatEntry>
       <ID>242</ID>
-      <Description>"Fast ACU Build"</Description>
+      <Description>"[X] &lt;== Fast Build Modifier"</Description>
+      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+      <Color>00FF00</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+// scan for the build-progress instruction
+aobscanmodule(fastBuildAOB, SupremeCommander2.exe, F3 0F 11 47 1C)  
+
+// allocate our code and multiplier
+alloc(newmem,256,fastBuildAOB)  
+alloc(fastMultiplier,4)  
+registersymbol(fastMultiplier)
+
+// default multiplier (can be tweaked in CE)
+fastMultiplier:
+  dd (float)10.0
+
+label(returnHere)
+label(skipBoost)
+
+newmem:
+  // only boost human-player units (owner ID==1)
+  cmp dword ptr [EDI+20],1
+  jne skipBoost
+  mulss xmm0,[fastMultiplier]
+skipBoost:
+  movss [EDI+1C],xmm0
+  jmp returnHere
+
+fastBuildAOB:
+  jmp newmem
+  nop 5
+returnHere:
+
+// status popup
+{$lua}
+  ShowMessage("Fast Build enabled; multiplier="..readFloat("fastMultiplier"))
+{$asm}
+
+[DISABLE]
+fastBuildAOB:
+  db F3 0F 11 47 1C 90
+dealloc(newmem)
+dealloc(fastMultiplier)
+unregistersymbol(fastMultiplier)
+{$lua}
+  ShowMessage("Fast Build disabled")
+{$asm}
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>243</ID>
+          <Description>"Fast Build Multiplier"</Description>
+          <Color>0080FF</Color>
+          <VariableType>Float</VariableType>
+          <Address>fastMultiplier</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>262</ID>
+      <Description>"FastBuild"</Description>
+      <GroupHeader>1</GroupHeader>
+      <Address>0</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>255</ID>
+          <Description>"Enginer2FAstBuild"</Description>
+          <VariableType>Float</VariableType>
+          <Address>0BEF631C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>258</ID>
+          <Description>"EnginerFastBuild"</Description>
+          <VariableType>Float</VariableType>
+          <Address>0BF0171C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>261</ID>
+          <Description>"acuFAstBuid"</Description>
+          <VariableType>Float</VariableType>
+          <Address>0FA34F1C</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>263</ID>
+      <Description>"pointerscan result"</Description>
       <VariableType>Float</VariableType>
-      <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
-      <Pointer>true</Pointer>
-      <Active>true</Active>
-      
+      <Address>"SupremeCommander2.exe"+014CA52C</Address>
       <Offsets>
-        <Offset>0x6E0</Offset>
-        <Offset>0x10</Offset>
-        <Offset>0x4</Offset>
-        <Offset>0xC</Offset>
-        <Offset>0x20</Offset>
-        <Offset>0x40</Offset>
-        <Offset>0x8EC</Offset>
+        <Offset>71C</Offset>
+        <Offset>1F4</Offset>
+        <Offset>10</Offset>
+        <Offset>1E4</Offset>
+        <Offset>30</Offset>
+        <Offset>38</Offset>
+        <Offset>8E4</Offset>
       </Offsets>
     </CheatEntry>
-
-
-
-
-
   </CheatEntries>
   <UserdefinedSymbols/>
   <Comments>===========================================
