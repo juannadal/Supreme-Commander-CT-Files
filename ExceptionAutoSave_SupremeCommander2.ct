@@ -377,17 +377,11 @@ getMainForm().CommentButton.doClick()
         <Offset>938</Offset>
       </Offsets>
     </CheatEntry>
-
-
- <!-- Fast ACU Build pointer -->
-     <CheatEntry>
+    <CheatEntry>
       <ID>242</ID>
       <Description>"Fast ACU Build"</Description>
       <VariableType>Float</VariableType>
       <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
-      <Pointer>true</Pointer>
-      <Active>true</Active>
-      
       <Offsets>
         <Offset>0x71C</Offset>
         <Offset>0x1C</Offset>
@@ -398,11 +392,6 @@ getMainForm().CommentButton.doClick()
         <Offset>0x8DC</Offset>
       </Offsets>
     </CheatEntry>
-
-
-
-
-
   </CheatEntries>
   <UserdefinedSymbols/>
   <Comments>===========================================
@@ -451,4 +440,32 @@ Tested on Win 10 64bits
 ===========================================
 Cheers!
 </Comments>
+  <LuaScript>-- assemble your hook
+autoAssemble([[
+  aobscanmodule(INJECT, SupremeCommander2.exe, F3 0F 11 80 8C 00 00 00)
+  alloc(newmem, $1000)
+  label(return)
+  newmem:
+    movss xmm0, [tempFloat]
+    movss [eax+0x8C], xmm0
+    jmp return
+  tempFloat:
+    real4 0.0000000001
+  INJECT:
+    jmp newmem
+    nop 3
+  return:
+]])
+
+-- set the breakpoint
+local addr = getAddressSafe("INJECT")
+local bp   = createBreakpoint(addr)
+bp.onBreakpoint = function()
+  local ctx = getContext()
+  print(string.format("xmm0 = %.10f", ctx.Xmm0F32[1]))
+  return 1
+end
+
+
+</LuaScript>
 </CheatTable>

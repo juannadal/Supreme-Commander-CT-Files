@@ -284,7 +284,7 @@ memrec.Color=0x0c08000
           <ID>66</ID>
           <Description>"[X] &lt;== God Mode"</Description>
           <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-          <Color>004000</Color>
+          <Color>C08000</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[enable]
 {$LUA}
@@ -377,32 +377,50 @@ getMainForm().CommentButton.doClick()
         <Offset>938</Offset>
       </Offsets>
     </CheatEntry>
-
-
- <!-- Fast ACU Build pointer -->
-     <CheatEntry>
+    <CheatEntry>
       <ID>242</ID>
       <Description>"Fast ACU Build"</Description>
       <VariableType>Float</VariableType>
       <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
-      <Pointer>true</Pointer>
-      <Active>true</Active>
-      
       <Offsets>
-        <Offset>0x71C</Offset>
-        <Offset>0x1C</Offset>
+        <Offset>0x6E0</Offset>
         <Offset>0x10</Offset>
-        <Offset>0x18</Offset>
-        <Offset>0x8</Offset>
-        <Offset>0x14</Offset>
-        <Offset>0x8DC</Offset>
+        <Offset>0x4</Offset>
+        <Offset>0xC</Offset>
+        <Offset>0x20</Offset>
+        <Offset>0x40</Offset>
+        <Offset>0x8EC</Offset>
       </Offsets>
     </CheatEntry>
-
-
-
-
-
+    <CheatEntry>
+      <ID>261</ID>
+      <Description>"ACUFAst"</Description>
+      <GroupHeader>1</GroupHeader>
+      <Address>0</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>248</ID>
+          <Description>"ACUFAstBuild21June2025"</Description>
+          <VariableType>Float</VariableType>
+          <Address>0A94031C</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>262</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"SupremeCommander2.exe"+014CA52C</Address>
+      <Offsets>
+        <Offset>71C</Offset>
+        <Offset>1C</Offset>
+        <Offset>10</Offset>
+        <Offset>18</Offset>
+        <Offset>8</Offset>
+        <Offset>14</Offset>
+        <Offset>8DC</Offset>
+      </Offsets>
+    </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
   <Comments>===========================================

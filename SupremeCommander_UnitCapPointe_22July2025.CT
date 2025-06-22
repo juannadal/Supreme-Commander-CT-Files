@@ -302,7 +302,7 @@ memrec.Color=0x0c08000
             <CheatEntry>
               <ID>229</ID>
               <Description>"[X] &lt;== Instant Building Production"</Description>
-              <Color>004000</Color>
+              <Color>C08000</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[enable]
 {$LUA}
@@ -377,17 +377,11 @@ getMainForm().CommentButton.doClick()
         <Offset>938</Offset>
       </Offsets>
     </CheatEntry>
-
-
- <!-- Fast ACU Build pointer -->
-     <CheatEntry>
+    <CheatEntry>
       <ID>242</ID>
       <Description>"Fast ACU Build"</Description>
       <VariableType>Float</VariableType>
       <Address>"SupremeCommander2.exe"+0x014CA52C</Address>
-      <Pointer>true</Pointer>
-      <Active>true</Active>
-      
       <Offsets>
         <Offset>0x71C</Offset>
         <Offset>0x1C</Offset>
@@ -398,11 +392,48 @@ getMainForm().CommentButton.doClick()
         <Offset>0x8DC</Offset>
       </Offsets>
     </CheatEntry>
+    <CheatEntry>
+      <ID>243</ID>
+      <Description>"Auto Assemble script"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+aobscanmodule(INJECT,SupremeCommander2.exe,F3 0F 11 80 8C 00 00 00 5F)
+alloc(newmem,$1000)
+//--&gt; Create a place in memory to store our 0.97 multiplier
+alloc(multiplier, 4)
 
+label(code)
+label(return)
 
+//--&gt; Store the float value 0.97 in our allocated memory
+multiplier:
+  dd (float)0.00001
 
+newmem:
+code:
+  // Multiply the original build time in xmm0 by our value (0.97)
+  // The result is stored back into xmm0
+  mulss xmm0,[multiplier]
 
+  // Let the game run its original code, which now uses our modified time
+  movss [eax+0000008C],xmm0
+  jmp return
 
+INJECT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+INJECT:
+  db F3 0F 11 80 8C 00 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+dealloc(multiplier)
+</AssemblerScript>
+    </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
   <Comments>===========================================
