@@ -284,7 +284,7 @@ memrec.Color=0x0c08000
           <ID>66</ID>
           <Description>"[X] &lt;== God Mode"</Description>
           <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-          <Color>004000</Color>
+          <Color>C08000</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[enable]
 {$LUA}
@@ -434,7 +434,117 @@ dealloc(newmem)
 dealloc(multiplier)
 </AssemblerScript>
     </CheatEntry>
+    <CheatEntry>
+      <ID>248</ID>
+      <Description>"Shild"</Description>
+      <GroupHeader>1</GroupHeader>
+      <Address>0</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>249</ID>
+          <Description>"No description"</Description>
+          <VariableType>Float</VariableType>
+          <Address>0883AF8C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>250</ID>
+          <Description>"No description"</Description>
+          <VariableType>Float</VariableType>
+          <Address>08BF9128</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>251</ID>
+          <Description>"No description"</Description>
+          <VariableType>Float</VariableType>
+          <Address>090015A4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>252</ID>
+          <Description>"No description"</Description>
+          <VariableType>Float</VariableType>
+          <Address>133C3758</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>253</ID>
+      <Description>"Auto Assemble script"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : SupremeCommander2.exe
+  Version: 1.260
+  Date   : 2025-06-23
+  Author : Juanf
+
+  This script prevents shield/unit health from decreasing by always
+  setting it to its maximum value right before it is updated.
+}
+
+[ENABLE]
+
+// Use a global aobscan to search all process memory, not just the .exe
+aobscan(INJECT,F3 0F 11 96 8C 00 00 00)
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+code:
+  // This is our new code. It loads the MAXIMUM shield value from [esi+90]
+  // and places it into xmm2, overwriting any damage calculation.
+  movss xmm2,[esi+00000090]
+
+  // This is the original instruction. It now saves the MAXIMUM value we just loaded
+  // back into the CURRENT shield/health memory location.
+  movss [esi+0000008C],xmm2
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 0F 11 96 8C 00 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+</AssemblerScript>
+    </CheatEntry>
   </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :movss [esi+0000008C],xmm2</Description>
+      <AddressString>2A4F00C9</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>5B</Byte>
+        <Byte>58</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>96</Byte>
+        <Byte>8C</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>E9</Byte>
+        <Byte>0E</Byte>
+        <Byte>FE</Byte>
+        <Byte>26</Byte>
+        <Byte>D6</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
   <UserdefinedSymbols/>
   <Comments>===========================================
  Game Title    : Supreme Commander 2
