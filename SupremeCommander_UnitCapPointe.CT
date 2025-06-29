@@ -393,7 +393,7 @@ getMainForm().CommentButton.doClick()
       </Offsets>
     </CheatEntry>
     <CheatEntry>
-      <ID>243</ID>
+      <ID>244</ID>
       <Description>"Unit Fast Build"</Description>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -410,6 +410,14 @@ multiplier:
   dd (float)0.00001
 
 newmem:
+
+cmp [eax+98],(float)1.0
+mulss xmm0,[multiplier]
+
+je code
+
+
+
 code:
   // Multiply the original build time in xmm0 by our value (0.97)
   // The result is stored back into xmm0
